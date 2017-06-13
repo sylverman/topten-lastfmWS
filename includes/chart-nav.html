@@ -1,0 +1,22 @@
+<div class="col-sm-9">
+	<nav class="chartNav" >
+		<ul class="nav navbar-nav">
+			<li ng-class="{'active':navTopTen.tracks}"><a href="#/topTenTracks">Top 10 Canciones</a></li>
+			<li ng-class="{'active':navTopTen.artists}"><a href="#/topTenArtists">Top 10 Artistas</a></li>
+		</ul>
+		<p class="navbar-text navbar-right" id="showItemsAs">
+			<a ng-click="updateMenuStatus('list', showItemsAs)" ng-class="{'active':showItemsAs.list}"><i class="fa fa-lg fa-th-list"></i></a>
+			<a ng-click="updateMenuStatus('mosaic', showItemsAs)" ng-class="{'active':showItemsAs.mosaic}"><i class="fa fa-lg fa-th"></i></a>
+		</p>
+	</nav>
+</div>
+<div class="col-sm-3">
+	<div class="searchBox">
+		<div id="searchText">
+			<input type="text" ng-model="search.key" class="form form-control" placeholder="Buscar..." />	
+		</div>
+		<i class="fa fa-search" aria-hidden="true"></i>
+	</div>
+</div>
+
+

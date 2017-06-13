@@ -1,0 +1,62 @@
+<div ng-include="mainLayout"></div>
+<div class="row listItems" ng-show="showItemsAs.list">
+	<table class="table table-striped trackList">
+		<tr class="hidden-xs">
+			<th>Posición</th>
+			<th></th>
+			<th>Canción</th>
+			<th>Artista</th>
+			<th>Reproducciones</th>
+			<th>Seguidores</th>
+		</tr>
+		<tr ng-repeat="track in topTenTracks | filter:search.key | limitTo: 10">
+			<td class="hidden-xs">{{$index+1}}</td>
+			<td>
+				<a href="{{track.url}}" target="blank"><img ng-src="{{track.image[1]['#text']}}"></a>
+			</td>
+			<td>
+				<a href="{{track.url}}" target="blank"><h4>{{track.name}}</h4></a>
+				<div class="visible-xs-block" hidden="">
+					<a href="{{track.artist.url}}" target="blank">{{track.artist.name}}</a>
+					<br>
+					<span>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						{{track.playcount | number}} | 
+						<i class="fa fa-user" aria-hidden="true"></i>
+						{{track.listeners | number}}
+					</span>
+				</div>
+			</td>
+			<td class="hidden-xs"><a href="{{track.artist.url}}" target="blank">{{track.artist.name}}</a></td>
+			<td class="hidden-xs">{{track.playcount | number}}</td>
+			<td class="hidden-xs">{{track.listeners | number}}</td>
+		</tr>
+	</table>
+</div>
+
+<div class="row flexboxContainer" ng-show="showItemsAs.mosaic">
+	<div ng-repeat="track in topTenTracks | filter:search.key | limitTo: 10" class="gridItem ">
+		<div>
+			<div class="bg">
+				<img ng-src="{{track.image[2]['#text']}}" />
+				<div class="gradient">
+					<div class="btn-play" hidden>
+						<i class="fa fa-play fa-2x"></i>
+					</div>
+				</div>
+				<div class="text">
+					<span>
+						<i class="fa fa-user" aria-hidden="true"></i> {{track.listeners | number}}	
+					</span>
+					<span>
+						<i class="fa fa-star" aria-hidden="true"></i> {{track.playcount | number}}	
+					</span>
+				</div>
+			</div>
+			<div class="text">
+				<a href="{{track.url}}" target="blank"><h4>{{$index+1}}. {{track.name}}</h4></a>
+				<a href="{{track.artist.url}}" target="blank">{{track.artist.name}}</a>
+			</div>
+		</div>
+	</div>
+</div>

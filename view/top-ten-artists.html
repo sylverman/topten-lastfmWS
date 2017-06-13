@@ -1,0 +1,55 @@
+<div ng-include="mainLayout"></div>
+<div class="row listItems" ng-show="showItemsAs.list">
+	<table class="table table-striped trackList">
+		<tr class="hidden-xs">
+			<th>Posición</th>
+			<th></th>
+			<th>Artista</th>
+			<th>Reproducciones</th>
+			<th>Seguidores</th>
+		</tr>
+		<tr ng-repeat="artist in topTenArtists | filter:search.key |limitTo: 10">
+			<td class="hidden-xs">{{$index+1}}</td>
+			<td>
+				<img ng-src="{{artist.image[1]['#text']}}" />
+			</td>
+			<td>
+				<a href="{{artist.url}}" target="blank"><h4>{{artist.name}}</h4></a>
+				<div class="visible-xs-block" hidden="">
+					<span>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						{{artist.playcount | number}} | 
+						<i class="fa fa-user" aria-hidden="true"></i>
+						{{artist.listeners | number}}
+					</span>
+				</div>
+			</td>
+			<td class="hidden-xs">{{artist.playcount | number}}</td>
+			<td class="hidden-xs">{{artist.listeners | number}}</td>
+		</tr>
+	</table>
+</div>
+
+<div class="row flexboxContainer" ng-show="showItemsAs.mosaic">
+	<div ng-repeat="artist in topTenArtists | filter:search.key | limitTo: 10" class="gridItem">
+		<div>
+			<a href="{{artist.url}}" target="_blank">
+				<div class="bg">
+					<img ng-src="{{artist.image[2]['#text']}}" />
+					<div class="gradient"></div>
+					<div class="text">
+						<span>
+							<i class="fa fa-user" aria-hidden="true"></i> {{artist.listeners | number}}
+						</span>
+						<span>
+							<i class="fa fa-star" aria-hidden="true"></i> {{artist.playcount | number}}	
+						</span>
+					</div>
+				</div>
+			</a>
+			<div class="text">
+				<a href="{{artist.url}}" target="blank"><h4>{{$index+1}}. {{artist.name}}</h4></a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="topTenLastFm">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport' />
+        <title>Top 10 Last.fm</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/controller.js"></script>
+        
+    </head>    
+    <body ng-controller="mainCtrl">
+        <div ng-include="mainNav"></div>
+        <div class="container" id="mainContent">
+            <div ng-view></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,287 @@
+body {
+  padding-top: 60px;
+  background-color: #e5e9ea;
+}
+#mainNav {
+	background-color: #f9455e;
+	border: 0;
+}
+#mainNavLogo {
+	height: 60px;
+}
+#mainContent {
+	background: #FFF;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.bg img {
+	width: 100%;
+}
+.chartNavBar {
+	border-bottom: 1px solid #e4e4e4 !important;
+}
+.searchBox {
+	height: 50px;
+	line-height: 45px;
+	color: #6b7986;
+	position: relative;
+	font-size: 20px;
+}
+.searchBox input {
+	width: 100%;
+	border: none;
+	background-color: #eff2f2;
+}
+.searchBox input:focus {
+	border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+	color: #db5266;
+}
+.searchBox #searchText {
+	position: absolute;
+	right: 0;
+	top: 8px;
+	bottom: 8px;
+	left: 40px;
+}
+.chartNav a {
+	color: #6b7986;
+	cursor: pointer;
+}
+.chartNav ul a {
+	padding-right: 40px !important;
+	padding-left: 40px !important;
+}
+.chartNav a:hover {
+	color: #db5266;
+	background-color: #eff2f2 !important; 
+}
+
+.chartNav ul .active {
+	border-bottom: 4px solid #db5266
+}
+.chartNav .active a{
+	color: #db5266;
+	padding-bottom: 11px;
+}
+.chartNav #showItemsAs {
+	color: #88919c;
+	margin: 7px 5px;
+}
+.chartNav #showItemsAs a {
+	display: inline-block;
+	width: 40px;
+	height: 34px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 34px;
+}
+.chartNav #showItemsAs a:hover {
+	background-color: #eff2f2 !important; 
+}
+.chartNav #showItemsAs a.active {
+	color: #db5266 !important;
+}
+.listItems {
+	box-sizing: border-box;
+	padding: 20px;
+}
+.trackList th {
+	border: none !important;
+}
+.trackList tr:nth-child(even){
+	background-color: #eff2f2 !important;
+}
+.trackList tr:nth-child(odd){
+	background-color: #FFF !important;
+}
+.trackList td {
+	border: none !important;
+	vertical-align: middle !important;		
+	color: #939ca5;
+	font-size: 16px;
+	font-weight: 300;
+}
+.trackList td a {
+	color: #939ca5;
+}
+.trackList td h4 {
+	margin: 4px 0;
+}
+.trackList td a:hover, .trackList td a:hover h4 {
+	color: #db5266;
+}
+.trackList tr td:first-child{
+	text-align: center !important;
+}
+.trackList td h4 {
+	color: #727e8a;
+	font-size: 17px;
+	font-weight:400;
+}
+.trackList td span {
+	font-size: 13px;
+}
+.flexboxContainer {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+			justify-content: flex-start;
+	-webkit-align-items: flex-start;
+			align-items: flex-start;
+	-webkit-align-content: flex-start;
+			align-content: flex-start;
+	margin: 20px;
+}
+.flexboxContainer .gridItem {
+	width: 150px;
+	max-width: 200px;
+	margin: 15px 20px;
+	-webkit-flex: 1 1 150px;
+			flex: 1 1 150px;
+}
+.flexboxContainer .gridItem > div {
+	width: 150px;
+	margin: auto;
+	color: #939ca5;
+	font-size: 14px;
+}
+.flexboxContainer .gridItem .text{
+	text-align: center;
+}
+.flexboxContainer .gridItem .text a {
+	color: #939ca5;
+}
+.flexboxContainer .gridItem .text h4, .flexboxContainer .gridItem > .text a h4 {
+	font-size: 15px;
+	color: #3f4b56;
+	line-height: 17px;
+	max-height: 54px;
+	overflow: hidden;
+	margin: 0;
+
+	display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    /*text-overflow: ellipsis;*/
+}
+.flexboxContainer .gridItem .text a:hover, .flexboxContainer .gridItem .text a:hover h4 {
+	color: #db5266;
+}
+.gridItem .bg {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	margin-bottom: 6px;
+
+}
+.gridItem .bg > img {
+	position: absolute;
+	z-index: 2;
+}
+.gridItem .bg .text {
+	position: absolute;
+	width: 100%;
+	height: 22px;
+	padding: 0 6px;
+	line-height: 22px;
+	font-size: 11px;
+	font-weight: lighter;
+	color: #FFF;
+	bottom: 0;
+	z-index: 4;
+}
+.gridItem .bg .gradient {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	z-index: 3;
+	opacity: .6;
+
+	background: -moz-linear-gradient(top,  rgba(4,4,7,0) 0%, rgba(4,4,7,0) 80%, rgba(4,4,7,0.5) 90%, rgba(4,4,7,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(4,4,7,0) 0%,rgba(4,4,7,0) 80%,rgba(4,4,7,0.5) 90%,rgba(4,4,7,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(4,4,7,0) 0%,rgba(4,4,7,0) 80%,rgba(4,4,7,0.5) 90%,rgba(4,4,7,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00040407', endColorstr='#040407',GradientType=0 ); /* IE6-9 */
+}
+.gridItem .bg .gradient:hover {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+			justify-content: center;
+	-webkit-align-items: center;
+			align-items: center;
+
+	cursor: pointer;
+	opacity: 1;
+	background: rgba(6,11,47,.6);
+}
+.gridItem .bg .gradient .btn-play {
+	-webkit-flex: 1;
+			flex: 1;
+	width: 70px;
+	max-width: 70px;
+	height: 70px;
+	padding: 5px 5px 5px 12px;
+	border-radius: 50%;
+	border: 2px solid #FFF;
+	font-size: 20px;
+	line-height: 70px;
+	text-align: center;
+	color: #FFF;
+}
+.gridItem .bg .gradient:hover .btn-play {
+	display: block;
+}
+.gridItem .bg .text span {
+	float: left;
+}
+.gridItem .bg .text span:first-of-type {
+	float: right;
+}
+@media screen and (min-width:768px) and (max-width:990px) {
+	#mainContent {
+		margin-top: 25px;
+		margin-bottom: 15px;
+	}	
+}
+@media screen and (max-width:767px) {
+	#mainContent {
+		margin:0;
+	}	
+	#mainNav {
+		border-bottom: 1px solid #fb7d8f;
+	}
+	.chartNav ul li {
+		float: left;
+		width: 40%;
+	}
+	.chartNav ul {
+		margin:0 !important;
+	}
+	.chartNav > p {
+		float: right;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.trackList tr td:nth-child(2){
+		width: 75px;
+	}
+	.flexboxContainer .gridItem {
+		zoom: .9;
+		max-width: 170px;
+		margin: 10px 10px;
+	}
+	.flexboxContainer {
+		margin: 0;
+	}
+	.container {
+		padding: 0;
+	}
+	.row {
+		margin: 0;
+		padding: 0;
+	}
+}
